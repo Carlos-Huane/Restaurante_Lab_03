@@ -316,5 +316,5 @@ export default function Usuarios() {
         )}
       </div>
     </div>
-  )
+  );
 }
