@@ -23,6 +23,8 @@ export default function Landing() {
       {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
+
+        {/* Columna izquierda — texto */}
         <div className={styles.heroContent}>
           <p className={styles.heroEtiqueta}>Bienvenido a</p>
           <h1 className={styles.heroTitulo}>
@@ -41,10 +43,33 @@ export default function Landing() {
             </Link>
           </div>
         </div>
-        <div className={styles.heroBadge}>
-          <span>🍜</span>
-          <p>+15 años<br />de tradición</p>
+
+        {/* Columna derecha — panel visual */}
+        <div className={styles.heroPanel}>
+          <div className={styles.heroPanelCard}>
+            <span className={styles.heroPanelEmoji}>🍜</span>
+            <p className={styles.heroPanelNombre}>Ramen Tonkotsu</p>
+            <p className={styles.heroPanelDesc}>El favorito de nuestra carta</p>
+            <div className={styles.heroPanelEstrellas}>★★★★★</div>
+          </div>
+          <div className={styles.heroPanelStats}>
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatNum}>+15</span>
+              <span className={styles.heroStatLabel}>Años de tradición</span>
+            </div>
+            <div className={styles.heroStatDiv} />
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatNum}>40+</span>
+              <span className={styles.heroStatLabel}>Platillos en carta</span>
+            </div>
+            <div className={styles.heroStatDiv} />
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatNum}>4.9</span>
+              <span className={styles.heroStatLabel}>Valoración media</span>
+            </div>
+          </div>
         </div>
+
       </section>
 
       {/* ── NUESTROS SERVICIOS ── */}
