@@ -1,0 +1,29 @@
+.page {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 2rem;
+  text-align: center;
+  background: #111111;
+}
+
+.icon {
+  font-size: 4rem;
+}
+
+.titulo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #d4a017;
+}
+
+.desc {
+  font-size: 1.05rem;
+  color: #888888;
+  max-width: 480px;
+  line-height: 1.6;
+}

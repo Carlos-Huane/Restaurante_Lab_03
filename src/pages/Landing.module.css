@@ -1,0 +1,336 @@
+.main {
+  padding-top: 64px; /* compensa el navbar fijo */
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  background:
+    linear-gradient(135deg, rgba(17,17,17,0.85) 0%, rgba(192,57,43,0.35) 100%),
+    url('https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=1600&q=80') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(212,160,23,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  max-width: 640px;
+  z-index: 1;
+}
+
+.heroEtiqueta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d4a017;
+  margin-bottom: 0.75rem;
+}
+
+.heroTitulo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 1.08;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.dorado { color: #d4a017; }
+
+.heroSub {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #cccccc;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.heroCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.heroBadge {
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(212,160,23,0.15);
+  border: 1px solid rgba(212,160,23,0.4);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroBadge span { font-size: 2rem; }
+.heroBadge p { font-size: 0.7rem; font-weight: 600; color: #d4a017; line-height: 1.3; }
+
+@media (max-width: 600px) {
+  .heroBadge { display: none; }
+}
+
+/* ── BOTONES GLOBALES ── */
+.btnPrimario {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background: #c0392b;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btnPrimario:hover { background: #a93226; transform: translateY(-2px); }
+
+.btnSecundario {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+.btnSecundario:hover {
+  border-color: #d4a017;
+  background: rgba(212,160,23,0.1);
+  transform: translateY(-2px);
+}
+
+/* ── SECCIONES ── */
+.seccion {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.seccionOscura {
+  max-width: 100%;
+  background: #1a1a1a;
+}
+
+.seccionOscura > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seccionTitulo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.seccionTitulo::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #d4a017;
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
+.seccionSub {
+  color: #999999;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── SERVICIOS ── */
+.serviciosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.servicioCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem 1.5rem;
+  background: #1e1e1e;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  transition: border-color 0.25s, transform 0.2s;
+  text-align: center;
+}
+
+.servicioCard:hover {
+  border-color: rgba(212,160,23,0.4);
+  transform: translateY(-4px);
+}
+
+.servicioEmoji { font-size: 2.8rem; }
+
+.servicioTitulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.servicioDesc { font-size: 0.9rem; color: #999; line-height: 1.5; }
+
+.servicioLink {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d4a017;
+}
+
+/* ── MENÚ GRID ── */
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+}
+
+.menuCard {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #242424;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: left;
+  transition: border-color 0.25s;
+}
+
+.menuCard:hover { border-color: rgba(192,57,43,0.4); }
+
+.menuEmoji { font-size: 2.4rem; flex-shrink: 0; }
+
+.menuNombre {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.menuDesc { font-size: 0.82rem; color: #999; line-height: 1.45; }
+
+/* ── RAZONES ── */
+.razonesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.razonCard {
+  padding: 2rem 1.5rem;
+  background: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+
+.razonIcon { font-size: 2.2rem; display: block; margin-bottom: 1rem; }
+
+.razonCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.razonCard p { font-size: 0.85rem; color: #999; line-height: 1.5; }
+
+/* ── BANNER REGISTRO ── */
+.bannerRegistro {
+  background: linear-gradient(135deg, #c0392b 0%, #7b241c 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.bannerContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bannerContent h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.bannerContent p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.bannerContent .btnPrimario {
+  background: #ffffff;
+  color: #c0392b;
+}
+.bannerContent .btnPrimario:hover {
+  background: #f0f0f0;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: #0d0d0d;
+  border-top: 1px solid rgba(212,160,23,0.2);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d4a017;
+}
+
+.footerCopy { font-size: 0.8rem; color: #555; }
+
+.footerNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footerNav a {
+  font-size: 0.85rem;
+  color: #888;
+  transition: color 0.2s;
+}
+.footerNav a:hover { color: #d4a017; }
