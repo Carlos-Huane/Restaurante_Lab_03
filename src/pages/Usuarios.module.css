@@ -1,0 +1,307 @@
+.container {
+  min-height: 100vh;
+  background: #111111;
+  padding-top: 64px;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, rgba(192, 57, 43, 0.6) 0%, rgba(17, 17, 17, 0.9) 100%),
+    url('https://images.unsplash.com/photo-1552058544-f03b3d6c504a?w=1600&q=80') center/cover no-repeat;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroTitulo {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #d4a017;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── CONTENIDO ── */
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ── MENSAJES ── */
+.mensaje {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mensaje.exito {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.mensaje.error {
+  background: rgba(192, 57, 43, 0.15);
+  color: #c0392b;
+  border: 1px solid rgba(192, 57, 43, 0.3);
+}
+
+/* ── TARJETA ── */
+.card {
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.noRegistro {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #d4a017;
+  margin: 0;
+  text-align: center;
+}
+
+.instrucciones {
+  color: #888888;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── PERFIL ── */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.perfilHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333333;
+}
+
+.nombre {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #d4a017;
+  margin: 0;
+}
+
+.btnEditar {
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnEditar:hover {
+  background: #a93226;
+  transform: translateY(-2px);
+}
+
+.perfilGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.perfilItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d4a017;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.valor {
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.btnEliminar {
+  background: rgba(192, 57, 43, 0.2);
+  color: #c0392b;
+  border: 1px solid #c0392b;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnEliminar:hover {
+  background: #c0392b;
+  color: white;
+}
+
+/* ── FORMULARIO ── */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formTitulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #d4a017;
+  margin: 0 0 0.5rem 0;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.labelForm {
+  font-weight: 600;
+  color: #d4a017;
+  font-size: 0.95rem;
+}
+
+.input {
+  padding: 0.75rem;
+  background: #222222;
+  border: 1px solid #444444;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #d4a017;
+  box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.1);
+}
+
+.input::placeholder {
+  color: #666666;
+}
+
+.botonesFormulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btnGuardar {
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnGuardar:hover {
+  background: #a93226;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
+}
+
+.btnCancelar {
+  background: transparent;
+  color: #888888;
+  border: 1px solid #444444;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnCancelar:hover {
+  border-color: #d4a017;
+  color: #d4a017;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .perfilGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfilHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nombre {
+    font-size: 1.5rem;
+  }
+
+  .botonesFormulario {
+    grid-template-columns: 1fr;
+  }
+
+  .heroTitulo {
+    font-size: 2rem;
+  }
+
+  .heroSub {
+    font-size: 0.95rem;
+  }
+}
